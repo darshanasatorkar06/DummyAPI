@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Add User Data</h2>
+<div mat-dialog-content>
+   <form [formGroup]="userForm">
+    <mat-form-field appearance="outline">
+        <mat-label>Title:</mat-label>
+        <input matInput placeholder="Title" formControlName="title">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+      <mat-label>Email:</mat-label>
+      <input matInput placeholder="Email" formControlName="email">
+    </mat-form-field>
+      
+    <mat-form-field appearance="outline">
+        <mat-label>First Name:</mat-label>
+        <input matInput placeholder="First Name" formControlName="firstName">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+          <mat-label>Last Name:</mat-label>
+          <input matInput placeholder="Last Name"  formControlName="lastName">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Picture:</mat-label>
+          <input matInput placeholder="Picture" formControlName="picture">
+        </mat-form-field>
+   
+   </form>
+       
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button  color="warn" mat-dialog-close>close</button>
+    <button style="margin-left: 8px;" mat-raised-button  color="primary" (click)="submit()">{{actionBtn}}</button>
+</div>
